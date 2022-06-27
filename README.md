@@ -13,8 +13,8 @@ Documentation of my homelab
 
 ## Router
 
-  - TP-LINK Archer C3200 (Internal; partially sandboxed)
-  - TP-LINK Archer AX10 (Fully sandboxed)
+  - [TP-LINK Archer C3200](https://www.tp-link.com/uk/home-networking/wifi-router/archer-c3200/) (Internal; partially sandboxed)
+  - [TP-LINK Archer AX10](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax10/) (Fully sandboxed)
 
 ## Switch
 
@@ -23,7 +23,13 @@ Documentation of my homelab
 
 
 # Network Topology
-[!Visual diagram]
+
+
+<p align="center">
+  <img width="661" alt="Network Topology" src="https://user-images.githubusercontent.com/10171446/175964935-10c1b26e-8487-473c-88d7-18ed70899f55.png">  
+  </br>
+  <b></b>
+</p>
 
 # Network Design
 
