@@ -1,5 +1,19 @@
-# homelab
+# Homelab
 Documentation of my homelab
+
+
+# Table of Contents
+
+- [Hardware](#hardware)
+  - [Intel NUC](#intel-nuc)
+  - [Router](#router)
+  - [Switch](#switch)
+- [Network Topology](#network-topology)
+- [Network Design](#network-design)
+  - [Network Sandboxing](#network-sandboxing)
+- [Virtualisation](#virtualisation)
+  - [QEMU](#qemu)
+
 
 
 # Hardware
@@ -54,3 +68,37 @@ The router has an IP address pool range reserved for the Intel NUC within 192.16
 ## QEMU
 Reason for choosing QEMU over VirtualBox or bare-metal...
 
+
+# Management
+
+## Automation
+
+## Remote Login
+
+## Logging
+
+
+# Public Key Infrastructure
+
+## Self-Signed Root Authority
+
+[Self-Signed-RootAuthority](https://github.com/safesploit/Self-Signed-RootAuthority)
+
+SWS Root CA X2 is the root authority for internally signed certificates as well as externally, such as [cloud.private.safesploit.com](https://cloud.private.safesploit.com/).
+
+Do make note that an intermediate authority is used. Hence, the wording of root authority.
+
+
+<p align="center">
+  <img width="471" alt="X509v3 Trust Chain" src="https://user-images.githubusercontent.com/10171446/175967371-31d22968-3f41-4571-91bf-d473751f00ca.png">
+  </br>
+  <b></b>
+</p>
+
+For users without the `SWS Root CA X2` certificate installed, another domain using Let's Encrypt is used, [cloud.safesploit.com](https://cloud.private.safesploit.com/). Both `cloud.private.` and `cloud.` subdomains have similar configurations, as confirmed by [SSL Labs](https://www.ssllabs.com/ssltest/). Except `cloud.private.` subdomain has been hardened to use a smaller set of more _modern ciphers_ which results in less compatibility with older web browsers.
+
+
+<p align="center">
+  <img width="866" alt="X509v3 Trust Chain" src="https://user-images.githubusercontent.com/10171446/175969094-7398a52b-fabe-4f05-90a1-069e62fdcb24.png">  </br>
+  <b>A sign certificate ultimately trusted by `SWS Root CA X2` being used by the internal domain `valhalla.sws-internal`</b>
+</p>
