@@ -66,7 +66,10 @@ The router has an IP address pool range reserved for the Intel NUC within 192.16
 
 
 ## QEMU
-Reason for choosing QEMU over VirtualBox or bare-metal...
+  - Reason for choosing QEMU over VirtualBox or bare-metal...
+    - Being able to assign VMs logical cores (threads)
+    - Use of [virt-manager](https://virt-manager.org/) as UI management which supports tunnelling over [X11](https://en.wikipedia.org/wiki/X_Window_System)
+    - Virt-manager is lightweight and supports VNC or SPICE 
 
 
 # Management
